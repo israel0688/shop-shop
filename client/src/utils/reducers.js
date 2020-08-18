@@ -1,4 +1,5 @@
 import { useReducer } from 'react';
+import { combineReducers } from 'redux';
 
 import {
     UPDATE_PRODUCTS,
@@ -92,3 +93,15 @@ export const reducer = (state, action) => {
 export function useProductReducer(initialState) {
     return useReducer(reducer, initialState);
   }
+
+export default combineReducers({
+  UPDATE_PRODUCTS,
+  UPDATE_CATEGORIES,
+  UPDATE_CURRENT_CATEGORY,
+  ADD_TO_CART,
+  ADD_MULTIPLE_TO_CART,
+  REMOVE_FROM_CART,
+  UPDATE_CART_QUANTITY,
+  CLEAR_CART,
+  TOGGLE_CART
+})
