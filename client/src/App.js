@@ -11,12 +11,13 @@ import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
 //import { StoreProvider } from "./utils/GlobalState";
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+//import { createStore } from 'redux';
 import { combineReducers } from './utils/reducers';
 import OrderHistory from "./pages/OrderHistory";
 import Success from "./pages/Success";
+import {store} from "./utils/Redux";
 
-const store = createStore(combineReducers);
+//const store = createStore(combineReducers);
 
 const client = new ApolloClient({
   request: (operation) => {
